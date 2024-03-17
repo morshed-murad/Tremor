@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import BarCharts from "./BarCharts";
-import Button from "../../button/Button";
+import Button from "../../button/Buttons";
 
 const AllBar = () => {
   const [showroute, setShowroute] = useState(true);

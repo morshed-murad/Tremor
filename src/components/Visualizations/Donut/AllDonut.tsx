@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Button from "../../button/Button";
+import Button from "../../button/Buttons";
 import { useState } from "react";
 import DunatChart from "./DunatChart";
 

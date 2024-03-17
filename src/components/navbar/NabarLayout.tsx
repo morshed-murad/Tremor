@@ -21,6 +21,8 @@ import DunatChart from "../Visualizations/Donut/DunatChart";
 import DunatChartLegend from "../Visualizations/Donut/DunatChartLegend";
 import All from "../UI/Accordion/All";
 import AllBadge from "../UI/badges/AllBadge";
+import DatePickers from "../UI/Date/DatePickers";
+import Dialogs from "../UI/Dialog/Dialogs";
 
 const NabarLayout = () => {
   const Routers = createBrowserRouter(
@@ -44,6 +46,8 @@ const NabarLayout = () => {
           </Route>
           <Route path="accordion" element={<All />} />
           <Route path="badges" element={<AllBadge />} />
+          <Route path="date" element={<DatePickers />} />
+          <Route path="dialog" element={<Dialogs />} />
         </Route>
       </Route>
     )

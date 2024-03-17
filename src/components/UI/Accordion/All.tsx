@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Accordions from "./Accordions";
 import SmallAccordion from "./SmallAccordion";
-import Button from "../../button/Button";
+import Button from "../../button/Buttons";
 
 const All = () => {
   return (
