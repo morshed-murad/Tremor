@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import Navbar from "./Navbar";
 import Pages from "../pages/Pages";
-import Product from "./Product";
-import Allpages from "../pages/Allpages";
+// import Product from "./Product";
+// import Allpages from "../pages/Allpages";
 import AllBar from "../Visualizations/bar/AllBar";
 import BarCharts from "../Visualizations/bar/BarCharts";
 import BarChartsTow from "../Visualizations/bar/BarChartsTow";
@@ -34,34 +34,33 @@ const NabarLayout = () => {
   const Routers = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>
-        <Route path="home" element={<Pages />} />
+        <Route index element={<Pages />} />
         <Route path="loginform" element={<LoginForm />} />
-        <Route element={<Product />}>
-          <Route index element={<Allpages />} />
-          <Route path="barCharts" element={<AllBar />}>
-            <Route path="simplebar" element={<BarCharts />} />
-            <Route path="groupBar" element={<BarChartsTow />} />
-          </Route>
-          <Route path="areaCharts" element={<AllAreaChart />}>
-            <Route path="areaChart" element={<AreaCharts />} />
-            <Route path="linechart" element={<LineCahrt />} />
-          </Route>
-          <Route path="donut" element={<AllDonut />}>
-            <Route path="simpledonut" element={<DunatChart />} />
-            <Route path="legend" element={<DunatChartLegend />} />
-          </Route>
-          <Route path="accordion" element={<All />} />
-          <Route path="badges" element={<AllBadge />}>
-            <Route path="date" element={<DatePickers />} />
-            <Route path="dialog" element={<Dialogs />} />
-            <Route path="legends" element={<Legends />} />
-            <Route path="list" element={<ListItems />} />
-            <Route path="numberinpute" element={<Inputs />} />
-            <Route path="select" element={<Selects />} />
-            <Route path="swichs" element={<Switching />} />
-          </Route>
-          <Route path="*" element={<NotFound />} />
+
+        {/* <Route index element={<Allpages />} /> */}
+        <Route path="barCharts" element={<AllBar />}>
+          <Route path="simplebar" element={<BarCharts />} />
+          <Route path="groupBar" element={<BarChartsTow />} />
         </Route>
+        <Route path="areaCharts" element={<AllAreaChart />}>
+          <Route path="areaChart" element={<AreaCharts />} />
+          <Route path="linechart" element={<LineCahrt />} />
+        </Route>
+        <Route path="donut" element={<AllDonut />}>
+          <Route path="simpledonut" element={<DunatChart />} />
+          <Route path="legend" element={<DunatChartLegend />} />
+        </Route>
+        <Route path="accordion" element={<All />} />
+        <Route path="badges" element={<AllBadge />}>
+          <Route path="date" element={<DatePickers />} />
+          <Route path="dialog" element={<Dialogs />} />
+          <Route path="legends" element={<Legends />} />
+          <Route path="list" element={<ListItems />} />
+          <Route path="numberinpute" element={<Inputs />} />
+          <Route path="select" element={<Selects />} />
+          <Route path="swichs" element={<Switching />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
