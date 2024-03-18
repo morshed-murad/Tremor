@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { UseContexts } from "../store/Store";
 import { useState } from "react";
 import PrfilImg from "../image/usericon.png";
@@ -10,13 +10,7 @@ const Navbar = () => {
       logout();
       setShow(false);
     }
-    if (location.state.from) {
-      navigate(location.state.from);
-    }
   };
-
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const [show, setShow] = useState(false);
   const handle = () => {
