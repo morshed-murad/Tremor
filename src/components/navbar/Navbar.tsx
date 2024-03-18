@@ -2,9 +2,10 @@ import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { UseContexts } from "../store/Store";
 import { useState } from "react";
 import PrfilImg from "../image/usericon.png";
+import Buttons from "../button/Buttons";
 const Navbar = () => {
   const { isLoggedIn, logout } = UseContexts();
-  const handleLogin = () => {
+  const handleLogOut = () => {
     if (isLoggedIn === true) {
       logout();
       setShow(false);
@@ -89,17 +90,7 @@ const Navbar = () => {
                       about
                     </li>
                   </ul>
-                  <NavLink
-                    onClick={handleLogin}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "bg-red-500 text-blue-700"
-                        : "bg-blue-700 text-white"
-                    }
-                    to=""
-                  >
-                    Log Out
-                  </NavLink>
+                  <Buttons children="Log Out" onClick={handleLogOut} />
                 </div>
               </div>
             </div>

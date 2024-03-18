@@ -23,6 +23,11 @@ import All from "../UI/Accordion/All";
 import AllBadge from "../UI/badges/AllBadge";
 import DatePickers from "../UI/Date/DatePickers";
 import Dialogs from "../UI/Dialog/Dialogs";
+import Legends from "../UI/Legend/Legends";
+import ListItems from "../UI/Last/ListItems";
+import Inputs from "../UI/input/Inputs";
+import Selects from "../UI/select/Selects";
+import Switching from "../UI/Switch/Switching";
 
 const NabarLayout = () => {
   const Routers = createBrowserRouter(
@@ -45,9 +50,15 @@ const NabarLayout = () => {
             <Route path="legend" element={<DunatChartLegend />} />
           </Route>
           <Route path="accordion" element={<All />} />
-          <Route path="badges" element={<AllBadge />} />
-          <Route path="date" element={<DatePickers />} />
-          <Route path="dialog" element={<Dialogs />} />
+          <Route path="badges" element={<AllBadge />}>
+            <Route path="date" element={<DatePickers />} />
+            <Route path="dialog" element={<Dialogs />} />
+            <Route path="legends" element={<Legends />} />
+            <Route path="list" element={<ListItems />} />
+            <Route path="numberinpute" element={<Inputs />} />
+            <Route path="select" element={<Selects />} />
+            <Route path="swichs" element={<Switching />} />
+          </Route>
         </Route>
       </Route>
     )

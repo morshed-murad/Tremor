@@ -13,7 +13,12 @@ const AllDonut = () => {
     <div className="py-24 px-10 flex flex-col gap-5 bg-gradient-to-r from-indigo-700 to-green-600 h-[130%]">
       <div>
         <NavLink to="/">
-          <Button children="Back" />
+          <Button
+            children="Back"
+            onClick={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
         </NavLink>
       </div>
       <div className="flex flex-col w-full gap-5">

@@ -11,7 +11,9 @@ const AllAreaChart = () => {
   return (
     <div className="py-24 px-10  bg-gradient-to-r from-indigo-700 to-pink-600 h-[100%]  ">
       <NavLink to="/">
-        <Button children="Back" />
+        <Button children="Back" onClick={function (): void {
+          throw new Error("Function not implemented.");
+        } } />
       </NavLink>
       <div className="w-full flex flex-col gap-5 ">
         <div className="nav flex gap-4 justify-end">

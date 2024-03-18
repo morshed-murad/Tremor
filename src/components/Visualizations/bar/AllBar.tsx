@@ -12,7 +12,9 @@ const AllBar = () => {
     <div className="py-24 px-10 w-full bg-gradient-to-r from-indigo-700 to-pink-600 h-[100%]">
       <div>
         <NavLink to="/">
-          <Button children="Back" />
+          <Button children="Back" onClick={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
         </NavLink>
       </div>
       <div className="w-full flex flex-col  gap-5">
