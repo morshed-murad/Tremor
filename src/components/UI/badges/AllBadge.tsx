@@ -65,6 +65,14 @@ const AllBadge = () => {
         >
           Select
         </NavLink>
+        <NavLink
+          to="swichs"
+          className={({ isActive }) =>
+            isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+          }
+        >
+          Switch
+        </NavLink>
       </div>
       <div>
         <Outlet />

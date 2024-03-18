@@ -8,7 +8,9 @@ const All = () => {
     <div className="flex flex-col gap-20 py-24 px-12">
       <div>
         <NavLink to="/">
-          <Button children="Back" />
+          <Button children="Back" onClick={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
         </NavLink>
       </div>
       <div>
