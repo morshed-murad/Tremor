@@ -9,8 +9,8 @@ const LoginForm = () => {
   };
   return (
     <div className="py-32 text-3xl text-red-500 cursor-default">
-      <NavLink onClick={handle} to="/">
-        click
+      <NavLink to="/">
+        <span onClick={handle}>click</span>
       </NavLink>
     </div>
   );
