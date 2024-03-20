@@ -3,15 +3,12 @@ import { UseContexts } from "./store/Store";
 
 const LoginForm = () => {
   const { isLoggedIn, login } = UseContexts();
-  const navigate = useNavigate();
-  const location = useLocation();
+
   const handle = () => {
     if (isLoggedIn === false) {
       login();
     }
-    if (location.state.from) {
-      navigate(location.state.from);
-    }
+
     console.log("clicked");
   };
   return (

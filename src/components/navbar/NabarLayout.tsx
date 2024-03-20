@@ -36,8 +36,6 @@ const NabarLayout = () => {
       <Route path="/" element={<Navbar />}>
         <Route index element={<Pages />} />
         <Route path="loginform" element={<LoginForm />} />
-
-        {/* <Route index element={<Allpages />} /> */}
         <Route path="barCharts" element={<AllBar />}>
           <Route path="simplebar" element={<BarCharts />} />
           <Route path="groupBar" element={<BarChartsTow />} />
