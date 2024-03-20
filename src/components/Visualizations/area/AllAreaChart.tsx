@@ -14,9 +14,7 @@ const AllAreaChart = () => {
 
   return (
     <div className="py-24 px-10  bg-gradient-to-r from-indigo-700 to-pink-600 h-[100%]  ">
-      {isLoggedIn === false ? (
-        <Navigate to="/loginform" />
-      ) : (
+      {isLoggedIn ? (
         <div>
           <NavLink to="/">
             <ButtonsCHild children="Back" />
@@ -51,6 +49,8 @@ const AllAreaChart = () => {
             </div>
           </div>
         </div>
+      ) : (
+        <Navigate to="/loginform" />
       )}
     </div>
   );

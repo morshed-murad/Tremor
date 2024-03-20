@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { imageStore } from "../store/ImagesStore";
-// import { UseContexts } from "../store/Store";
 
 const Pages = () => {
-  // const { isLoggedIn } = UseContexts();
   return (
     <div>
       <div className="py-24 px-10 bg-gradient-to-r from-blue-600 to-indigo-700">
