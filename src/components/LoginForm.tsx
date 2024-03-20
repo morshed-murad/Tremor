@@ -5,11 +5,7 @@ const LoginForm = () => {
   const { isLoggedIn, login } = UseContexts();
 
   const handle = () => {
-    if (isLoggedIn === false) {
-      login();
-    }
-
-    console.log("clicked");
+    if (isLoggedIn === false) login();
   };
   return (
     <div className="py-32 text-3xl text-red-500 cursor-default">
