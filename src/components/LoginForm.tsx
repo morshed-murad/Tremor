@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { UseContexts } from "./store/Store";
+import Buttons from "./button/Buttons";
 
 const LoginForm = () => {
   const { isLoggedIn, login } = UseContexts();
@@ -9,14 +10,18 @@ const LoginForm = () => {
   };
   return (
     <div className="py-32 px-10 text-3xl text-red-500 cursor-default">
-      <div className="nav">
-        <NavLink to="/">Back</NavLink>
-      </div>
-      <div className="flex justify-center">
+      <div>
         {isLoggedIn === false ? (
-          <NavLink to="/">
-            <span onClick={handle}>click</span>
-          </NavLink>
+          <div>
+            <div className="nav">
+              <NavLink to="/">Back</NavLink>
+            </div>
+            <div className="flex justify-center">
+              <NavLink to="/">
+                <Buttons onClick={handle} children="Click" />
+              </NavLink>
+            </div>
+          </div>
         ) : (
           ""
         )}

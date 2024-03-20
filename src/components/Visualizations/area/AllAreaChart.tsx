@@ -1,8 +1,9 @@
 import { NavLink, Navigate, Outlet } from "react-router-dom";
-import Button from "../../button/Buttons";
+
 import { useState } from "react";
 import LineCahrt from "./LineCahrt";
 import { UseContexts } from "../../store/Store";
+import ButtonsCHild from "../../button/ButtonsCHild";
 
 const AllAreaChart = () => {
   const { isLoggedIn } = UseContexts();
@@ -18,12 +19,7 @@ const AllAreaChart = () => {
       ) : (
         <div>
           <NavLink to="/">
-            <Button
-              children="Back"
-              onClick={function (): void {
-                throw new Error("Function not implemented.");
-              }}
-            />
+            <ButtonsCHild children="Back" />
           </NavLink>
           <div className="w-full flex flex-col gap-5 ">
             <div className="nav flex gap-4 justify-end">

@@ -1,16 +1,15 @@
 import { NavLink } from "react-router-dom";
 import Accordions from "./Accordions";
 import SmallAccordion from "./SmallAccordion";
-import Button from "../../button/Buttons";
+
+import ButtonsCHild from "../../button/ButtonsCHild";
 
 const All = () => {
   return (
     <div className="flex flex-col gap-20 py-24 px-12">
       <div>
         <NavLink to="/">
-          <Button children="Back" onClick={function (): void {
-            throw new Error("Function not implemented.");
-          } } />
+          <ButtonsCHild children="Back" />
         </NavLink>
       </div>
       <div>

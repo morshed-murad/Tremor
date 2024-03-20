@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import BarCharts from "./BarCharts";
-import Button from "../../button/Buttons";
+
+import ButtonsCHild from "../../button/ButtonsCHild";
 
 const AllBar = () => {
   const [showroute, setShowroute] = useState(true);
@@ -12,9 +13,7 @@ const AllBar = () => {
     <div className="py-24 px-10 w-full bg-gradient-to-r from-indigo-700 to-pink-600 h-[100%]">
       <div>
         <NavLink to="/">
-          <Button children="Back" onClick={function (): void {
-            throw new Error("Function not implemented.");
-          } } />
+          <ButtonsCHild children="Back" />
         </NavLink>
       </div>
       <div className="w-full flex flex-col  gap-5">

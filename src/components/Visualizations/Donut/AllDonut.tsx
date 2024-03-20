@@ -1,7 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Button from "../../button/Buttons";
+
 import { useState } from "react";
 import DunatChart from "./DunatChart";
+import ButtonsCHild from "../../button/ButtonsCHild";
 
 const AllDonut = () => {
   const [show, setShow] = useState(true);
@@ -13,12 +14,7 @@ const AllDonut = () => {
     <div className="py-24 px-10 flex flex-col gap-5 bg-gradient-to-r from-indigo-700 to-green-600 h-[130%]">
       <div>
         <NavLink to="/">
-          <Button
-            children="Back"
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-          />
+          <ButtonsCHild children="Back" />
         </NavLink>
       </div>
       <div className="flex flex-col w-full gap-5">
