@@ -5,13 +5,22 @@ const LoginForm = () => {
   const { isLoggedIn, login } = UseContexts();
 
   const handle = () => {
-    if (isLoggedIn === false) login();
+    login();
   };
   return (
-    <div className="py-32 text-3xl text-red-500 cursor-default">
-      <NavLink to="/">
-        <span onClick={handle}>click</span>
-      </NavLink>
+    <div className="py-32 px-10 text-3xl text-red-500 cursor-default">
+      <div className="nav">
+        <NavLink to="/">Back</NavLink>
+      </div>
+      <div className="flex justify-center">
+        {isLoggedIn === false ? (
+          <NavLink to="/">
+            <span onClick={handle}>click</span>
+          </NavLink>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };
