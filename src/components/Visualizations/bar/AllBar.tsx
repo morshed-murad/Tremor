@@ -4,6 +4,7 @@ import BarCharts from "./BarCharts";
 
 import ButtonsCHild from "../../button/ButtonsCHild";
 import { UseContexts } from "../../store/Store";
+import { useThemeStore } from "../../store/Dark/ThemeStor";
 
 const AllBar = () => {
   const { isLoggedIn } = UseContexts();
@@ -11,8 +12,15 @@ const AllBar = () => {
   const handleclick = () => {
     setShowroute(false);
   };
+  const { darkMode } = useThemeStore();
   return (
-    <div className="py-24 px-10 w-full bg-gradient-to-r from-indigo-700 to-pink-600 h-[100%]">
+    <div
+      className={`py-24 px-10 w-full h-[100%] ${
+        darkMode
+          ? " bg-gradient-to-r from-indigo-700 to-pink-600"
+          : " bg-gradient-to-r from-gray-400 to-gray-900"
+      }`}
+    >
       {isLoggedIn ? (
         <div>
           <div>

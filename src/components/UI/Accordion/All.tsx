@@ -10,7 +10,7 @@ const All = () => {
   return (
     <div className="flex flex-col gap-20 py-24 px-12">
       {isLoggedIn ? (
-        <div>
+        <div className="flex flex-col gap-10">
           <div>
             <NavLink to="/">
               <ButtonsCHild children="Back" />

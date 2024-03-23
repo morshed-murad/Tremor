@@ -4,6 +4,7 @@ import { useState } from "react";
 import LineCahrt from "./LineCahrt";
 import { UseContexts } from "../../store/Store";
 import ButtonsCHild from "../../button/ButtonsCHild";
+import { useThemeStore } from "../../store/Dark/ThemeStor";
 
 const AllAreaChart = () => {
   const { isLoggedIn } = UseContexts();
@@ -12,8 +13,15 @@ const AllAreaChart = () => {
     setShow(false);
   };
 
+  const { darkMode } = useThemeStore();
   return (
-    <div className="py-24 px-10  bg-gradient-to-r from-indigo-700 to-pink-600 h-[100%]  ">
+    <div
+      className={`py-24 px-10  h-[100%] ${
+        darkMode
+          ? " bg-gradient-to-r from-indigo-700 to-pink-600"
+          : " bg-gradient-to-r from-gray-400 to-gray-900"
+      }`}
+    >
       {isLoggedIn ? (
         <div>
           <NavLink to="/">

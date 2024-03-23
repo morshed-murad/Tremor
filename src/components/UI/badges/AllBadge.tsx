@@ -9,7 +9,7 @@ const AllBadge = () => {
   return (
     <div className="py-32 flex flex-col gap-10 px-10">
       {isLoggedIn ? (
-        <div>
+        <div className="flex flex-col gap-5">
           <div className="nav">
             <NavLink
               to="/"
@@ -76,6 +76,14 @@ const AllBadge = () => {
               }
             >
               Switch
+            </NavLink>
+            <NavLink
+              to="table"
+              className={({ isActive }) =>
+                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+              }
+            >
+              Table
             </NavLink>
           </div>
           <div>
