@@ -2,9 +2,8 @@ import { NavLink, Navigate, Outlet } from "react-router-dom";
 
 import { useState } from "react";
 import DunatChart from "./DunatChart";
-
+import ButtonsCHild from "../../button/ButtonsCHild";
 import { UseContexts } from "../../store/Store";
-import GoBackBtn from "../../button/GoBackBtn";
 
 const AllDonut = () => {
   const { isLoggedIn } = UseContexts();
@@ -22,7 +21,9 @@ const AllDonut = () => {
       {isLoggedIn ? (
         <div>
           <div>
-            <GoBackBtn />
+            <NavLink to="/">
+              <ButtonsCHild children="Back" />
+            </NavLink>
           </div>
           <div className="flex flex-col w-full gap-5">
             <div className="nav flex gap-5 justify-end">
