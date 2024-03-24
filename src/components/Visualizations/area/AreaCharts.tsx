@@ -4,9 +4,9 @@ import { dataFormatter } from "../store/StorFormat";
 
 const AreaCharts = () => {
   return (
-    <div className="bg-blue-100">
+    <div className="p-4 rounded  bg-white dark:bg-gray-900">
       <AreaChart
-        className="h-80"
+        className="h-80 "
         data={chartdata}
         index="date"
         categories={["SemiAnalysis", "The Pragmatic Engineer"]}

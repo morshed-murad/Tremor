@@ -7,14 +7,17 @@ import { NavLink, Navigate, Outlet } from "react-router-dom";
 const AllBadge = () => {
   const { isLoggedIn } = UseContexts();
   return (
-    <div className="py-32 flex flex-col gap-10 px-10">
+    <div className="py-32 flex flex-col gap-10 px-10 bg-gradient-to-r from-indigo-700 to-stone-500
+    dark:from-gray-400 dark:to-gray-900">
       {isLoggedIn ? (
         <div className="flex flex-col gap-5">
           <div className="nav">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Back
@@ -24,7 +27,9 @@ const AllBadge = () => {
             <NavLink
               to="date"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Date
@@ -32,7 +37,9 @@ const AllBadge = () => {
             <NavLink
               to="dialog"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Dialog
@@ -40,7 +47,9 @@ const AllBadge = () => {
             <NavLink
               to="legends"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Legends
@@ -48,7 +57,9 @@ const AllBadge = () => {
             <NavLink
               to="list"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               List items
@@ -56,7 +67,9 @@ const AllBadge = () => {
             <NavLink
               to="numberinpute"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Inputs
@@ -64,7 +77,9 @@ const AllBadge = () => {
             <NavLink
               to="select"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Select
@@ -72,7 +87,9 @@ const AllBadge = () => {
             <NavLink
               to="swichs"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Switch
@@ -80,7 +97,9 @@ const AllBadge = () => {
             <NavLink
               to="table"
               className={({ isActive }) =>
-                isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+                isActive
+                  ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                  : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
               }
             >
               Table

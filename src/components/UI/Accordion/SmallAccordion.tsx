@@ -10,10 +10,10 @@ function SmallAccordion() {
     <div>
       <AccordionList className="mx-auto max-w-md">
         <Accordion>
-          <AccordionHeader className="bg-blue-100 text-sm font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+          <AccordionHeader className="bg-blue-100 dark:bg-gray-900 text-sm font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
             Accordion 1
           </AccordionHeader>
-          <AccordionBody>
+          <AccordionBody className="dark:text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             vel repellendus officia, dignissimos, doloremque magni quisquam
             architecto hic incidunt nobis molestiae impedit rem aut quos placeat
@@ -21,10 +21,10 @@ function SmallAccordion() {
           </AccordionBody>
         </Accordion>
         <Accordion>
-          <AccordionHeader className="bg-red-100 text-sm font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+          <AccordionHeader className="bg-red-100 dark:bg-gray-900 text-sm font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
             Accordion 2
           </AccordionHeader>
-          <AccordionBody>
+          <AccordionBody className="dark:text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             vel repellendus officia, dignissimos, doloremque magni quisquam
             architecto hic incidunt nobis molestiae impedit rem aut quos placeat
@@ -32,10 +32,10 @@ function SmallAccordion() {
           </AccordionBody>
         </Accordion>
         <Accordion>
-          <AccordionHeader className="bg-indigo-100 text-sm font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
+          <AccordionHeader className="bg-indigo-100 dark:bg-gray-900 text-sm font-medium text-tremor-content-strong dark:text-dark-tremor-content-strong">
             Accordion 3
           </AccordionHeader>
-          <AccordionBody>
+          <AccordionBody className="dark:text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             vel repellendus officia, dignissimos, doloremque magni quisquam
             architecto hic incidunt nobis molestiae impedit rem aut quos placeat

@@ -104,12 +104,7 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <span
-            onClick={toggleDarkMode}
-            // className={`py-2 px-4  rounded ${
-            //   darkMode ? "bg-blue-500" : "bg-indigo-800"
-            // }`}
-          >
+          <span onClick={toggleDarkMode}>
             {darkMode ? <RiMoonFill /> : <RiSunFill />}
           </span>
         </nav>

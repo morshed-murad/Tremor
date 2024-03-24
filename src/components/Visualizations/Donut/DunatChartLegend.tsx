@@ -4,7 +4,7 @@ import { dataFormatterDonut } from "../store/StorFormat";
 
 const DunatChartLegend = () => {
   return (
-    <div className="py-10 px-10 bg-indigo-100">
+    <div className="py-10 px-10 bg-white dark:bg-gray-900">
       <div className="flex justify-center items-center gap-20">
         <DonutChart
           data={sales}

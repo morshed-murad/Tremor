@@ -4,7 +4,7 @@ import { dataFormatters } from "../store/StorFormat";
 
 const BarChartsTow = () => {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-white dark:bg-gray-900 p-4 rounded">
       <BarChart
         className="mt-6"
         data={chartdataColors}

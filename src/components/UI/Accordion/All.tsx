@@ -8,7 +8,7 @@ import { UseContexts } from "../../store/Store";
 const All = () => {
   const { isLoggedIn } = UseContexts();
   return (
-    <div className="flex flex-col gap-20 py-24 px-12">
+    <div className="flex flex-col gap-20 py-24 px-12  bg-gradient-to-r dark:from-gray-400 dark:to-gray-900">
       {isLoggedIn ? (
         <div className="flex flex-col gap-10">
           <div>

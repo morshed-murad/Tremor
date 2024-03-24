@@ -24,18 +24,20 @@ const Tables = () => {
     setShow(ChangeStatus);
   };
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-green-900 to-green-300">
+    <div className="py-32 px-10 bg-gradient-to-r from-green-900 to-green-300 dark:from-gray-500 dark:to-gray-800">
       <div className="nav">
         <NavLink
           to="/badges"
           className={({ isActive }) =>
-            isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+            isActive
+              ? "bg-red-500 text-blue-700 dark:bg-gray-800 dark:text-blue-500"
+              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
           }
         >
           Back
         </NavLink>
       </div>
-      <div className="bg-white p-5 border rounded my-5">
+      <div className="bg-white dark:bg-gray-900 dark:border-none p-5 border rounded my-5">
         <Table>
           <TableHead>
             <TableRow>

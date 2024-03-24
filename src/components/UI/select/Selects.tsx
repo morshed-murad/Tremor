@@ -13,20 +13,22 @@ import { NavLink } from "react-router-dom";
 const Selects = () => {
   const [value, setValue] = useState("");
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-blue-300 to-blue-900 ">
+    <div className="py-32 px-10 bg-gradient-to-r from-blue-300 to-blue-900 dark:bg-gray-500 dark:to-gray-800">
       <div className="nav">
         <NavLink
           to="/badges"
           className={({ isActive }) =>
-            isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+            isActive
+              ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
           }
         >
           Back
         </NavLink>
       </div>
       <div className="flex flex-col gap-5 w-full justify-center">
-        <div className=" bg-white p-5 rounded border w-[400px] mx-auto ">
-          <span className="mb-4 text-center font-mono text-sm text-slate-500">
+        <div className=" bg-white dark:bg-gray-900 p-5 rounded border w-[400px] mx-auto ">
+          <span className="mb-4 text-center font-mono text-sm text-slate-500 dark:text-white ">
             Select
           </span>
           <Select defaultValue="1">
@@ -36,8 +38,8 @@ const Selects = () => {
             <SelectItem value="4">Option Four</SelectItem>
           </Select>
         </div>
-        <div className=" bg-white p-5 rounded border w-[400px] mx-auto ">
-          <span className="mb-4 text-center font-mono text-sm text-slate-500">
+        <div className=" bg-white dark:bg-gray-900 p-5 rounded border w-[400px] mx-auto ">
+          <span className="mb-4 text-center font-mono text-sm text-slate-500 dark:text-white">
             Search Select
           </span>
           <SearchSelect>
@@ -47,8 +49,8 @@ const Selects = () => {
             <SearchSelectItem value="4">Option1</SearchSelectItem>
           </SearchSelect>
         </div>
-        <div className=" bg-white p-5 rounded border w-[400px] mx-auto ">
-          <span className="mb-4 text-center font-mono text-sm text-slate-500">
+        <div className=" bg-white dark:bg-gray-900 p-5 rounded border w-[400px] mx-auto ">
+          <span className="mb-4 text-center font-mono text-sm text-slate-500 dark:text-white">
             Multi Select
           </span>
           <MultiSelect>
@@ -58,10 +60,10 @@ const Selects = () => {
             <MultiSelectItem value="4">Option 4</MultiSelectItem>
           </MultiSelect>
         </div>
-        <div className=" bg-white p-5 rounded border w-[400px] mx-auto ">
+        <div className=" bg-white dark:bg-gray-900 p-5 rounded border w-[400px] mx-auto ">
           <label
             htmlFor="distance"
-            className="text-tremor-default text-tremor-content dark:text-dark-tremor-content"
+            className="text-tremor-default text-tremor-content dark:text-white "
           >
             Multi Select
           </label>

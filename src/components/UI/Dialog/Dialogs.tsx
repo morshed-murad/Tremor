@@ -12,7 +12,9 @@ const Dialogs = () => {
         <NavLink
           to="/badges"
           className={({ isActive }) =>
-            isActive ? "bg-red-500 text-blue-700" : "bg-blue-700 text-white"
+            isActive
+              ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
           }
         >
           Back
@@ -22,7 +24,7 @@ const Dialogs = () => {
         <div className="">
           <button
             onClick={() => setIsOpen(true)}
-            className="p-2 px-4 rounded bg-red-600 text-white font-serif "
+            className="p-2 px-4 rounded bg-red-600 text-white font-serif dark:bg-gray-800"
           >
             Show Dialog
           </button>
@@ -54,7 +56,7 @@ const Dialogs = () => {
               <h1 className="text-lg font-semibold text-tremor-content-strong dark:text-dark-tremor-content-strong">
                 Account Created successfully
               </h1>
-              <p>
+              <p className="dark:text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Expedita minus tenetur reiciendis adipisci deleniti earum cumque
                 dolore, animi sunt rerum tempora laudantium iste laborum

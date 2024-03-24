@@ -4,7 +4,6 @@ import { useState } from "react";
 import DunatChart from "./DunatChart";
 import ButtonsCHild from "../../button/ButtonsCHild";
 import { UseContexts } from "../../store/Store";
-import { useThemeStore } from "../../store/Dark/ThemeStor";
 
 const AllDonut = () => {
   const { isLoggedIn } = UseContexts();
@@ -14,12 +13,10 @@ const AllDonut = () => {
     setShow(false);
   };
 
-  const { darkMode } = useThemeStore();
   return (
     <div
-      className={`py-24 px-10 flex flex-col gap-5 bg-gradient-to-r  h-[100%] ${
-        darkMode ? "from-indigo-700 to-green-600" : "from-gray-400 to-gray-900"
-      }`}
+      className="py-24 px-10 flex flex-col gap-5  h-[100%] bg-gradient-to-r from-indigo-700 to-pink-600
+      dark:from-gray-400 dark:to-gray-900"
     >
       {isLoggedIn ? (
         <div>
@@ -34,8 +31,8 @@ const AllDonut = () => {
                 onClick={handleChange}
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-red-500 text-blue-700"
-                    : "bg-blue-700 text-white"
+                    ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                    : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
                 }
                 to="simpledonut"
               >
@@ -45,8 +42,8 @@ const AllDonut = () => {
                 onClick={handleChange}
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-red-500 text-blue-700"
-                    : "bg-blue-700 text-white"
+                    ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                    : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
                 }
                 to="legend"
               >
