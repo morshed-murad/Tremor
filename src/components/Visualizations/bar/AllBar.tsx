@@ -2,8 +2,8 @@ import { useState } from "react";
 import { NavLink, Navigate, Outlet } from "react-router-dom";
 import BarCharts from "./BarCharts";
 
-import ButtonsCHild from "../../button/ButtonsCHild";
 import { UseContexts } from "../../store/Store";
+import GoBackBtn from "../../button/GoBackBtn";
 
 const AllBar = () => {
   const { isLoggedIn } = UseContexts();
@@ -20,9 +20,7 @@ const AllBar = () => {
       {isLoggedIn ? (
         <div>
           <div>
-            <NavLink to="/">
-              <ButtonsCHild children="Back" />
-            </NavLink>
+            <GoBackBtn />
           </div>
           <div className="w-full flex flex-col  gap-5">
             <div className="nav flex gap-5 justify-end">

@@ -13,11 +13,9 @@ function App() {
     }
   }, [darkMode]);
   return (
-    <>
-      <div>
-        <NabarLayout />
-      </div>
-    </>
+    <div className="scroll">
+      <NabarLayout />
+    </div>
   );
 }
 

@@ -1,21 +1,13 @@
 import { Card, List, ListItem } from "@tremor/react";
-import { NavLink } from "react-router-dom";
+
 import { cities } from "./Store";
+import GoBackBtn from "../../button/GoBackBtn";
 
 const ListItems = () => {
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-sky-600 to-lime-700 dark:from-gray-500 dark:to-gray-800">
+    <div className="pt-20 pb-32 px-10 bg-gradient-to-r from-sky-600 to-lime-700 dark:from-gray-500 dark:to-gray-800 fixed top-[72px] left-0 w-full h-full z-40  overflow-scroll">
       <div className="nav">
-        <NavLink
-          to="/badges"
-          className={({ isActive }) =>
-            isActive
-              ? "bg-red-500 text-blue-700 dark:bg-gray-800 dark:text-blue-500"
-              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
-          }
-        >
-          Back
-        </NavLink>
+        <GoBackBtn />
       </div>
       <div className="flex justify-center items-center m-auto p-5 rounded border bg-white dark:bg-gray-900 max-w-md">
         <List>

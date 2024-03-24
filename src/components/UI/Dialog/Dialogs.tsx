@@ -1,24 +1,16 @@
 import { Button, Dialog, DialogPanel } from "@tremor/react";
 import { useState } from "react";
 import Buttons from "../../button/Buttons";
-import { NavLink } from "react-router-dom";
+
+import GoBackBtn from "../../button/GoBackBtn";
 
 const Dialogs = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpens, setIsOpens] = useState(false);
   return (
-    <div className="py-32 px-10">
+    <div className="py-10 px-10 bg-blue-600 fixed top-[72px] left-0 w-full h-full z-40">
       <div className="nav">
-        <NavLink
-          to="/badges"
-          className={({ isActive }) =>
-            isActive
-              ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
-              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
-          }
-        >
-          Back
-        </NavLink>
+        <GoBackBtn />
       </div>
       <div className=" flex justify-center gap-5 items-center">
         <div className="">

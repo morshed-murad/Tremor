@@ -3,7 +3,8 @@ import { NavLink, Navigate, Outlet } from "react-router-dom";
 import { useState } from "react";
 import LineCahrt from "./LineCahrt";
 import { UseContexts } from "../../store/Store";
-import ButtonsCHild from "../../button/ButtonsCHild";
+
+import GoBackBtn from "../../button/GoBackBtn";
 
 const AllAreaChart = () => {
   const { isLoggedIn } = UseContexts();
@@ -19,9 +20,7 @@ const AllAreaChart = () => {
     >
       {isLoggedIn ? (
         <div>
-          <NavLink to="/">
-            <ButtonsCHild children="Back" />
-          </NavLink>
+          <GoBackBtn />
           <div className="w-full flex flex-col gap-5 ">
             <div className="nav flex gap-4 justify-end">
               <NavLink

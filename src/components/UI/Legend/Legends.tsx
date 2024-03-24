@@ -1,22 +1,14 @@
 import { Card, CategoryBar, Legend } from "@tremor/react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+
+import GoBackBtn from "../../button/GoBackBtn";
 
 const Legends = () => {
   const [value, setValue] = useState("");
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-indigo-700 to-pink-600 dark:from-gray-500 dark:to-gray-800">
+    <div className="scroll py-10 px-10 bg-gradient-to-r from-indigo-700 to-pink-600 dark:from-gray-500 dark:to-gray-800 fixed top-[72px] left-0 w-full h-full z-40">
       <div className="nav">
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "bg-red-500 text-blue-700 dark:bg-gray-800 dark:text-blue-500"
-              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
-          }
-          to="/badges"
-        >
-          Back
-        </NavLink>
+        <GoBackBtn />
       </div>
       <div className="p-5 flex items-center justify-center rounded border bg-white dark:bg-gray-900 m-auto max-w-md">
         <Legend

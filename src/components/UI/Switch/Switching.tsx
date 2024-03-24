@@ -1,6 +1,7 @@
 import { Card, Switch } from "@tremor/react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+
+import GoBackBtn from "../../button/GoBackBtn";
 
 const Switching = () => {
   const [isSwitchOn, setIsSwitchOn] = useState(false);
@@ -10,16 +11,7 @@ const Switching = () => {
   return (
     <div className="py-32 px-10 bg-gradient-to-r from-red-200 to-red-500 dark:from-gray-500 dark:to-gray-800 ">
       <div className="nav">
-        <NavLink
-          to="/badges"
-          className={({ isActive }) =>
-            isActive
-              ? "bg-red-500 text-blue-700 dark:bg-gray-800 dark:text-blue-500"
-              : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
-          }
-        >
-          Back
-        </NavLink>
+        <GoBackBtn />
       </div>
       <div className="flex flex-col gap-5">
         <div className=" bg-white dark:bg-gray-900 p-5 rounded border w-[400px] mx-auto flex justify-center ">

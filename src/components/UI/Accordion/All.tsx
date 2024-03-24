@@ -1,9 +1,9 @@
-import { NavLink, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Accordions from "./Accordions";
 import SmallAccordion from "./SmallAccordion";
 
-import ButtonsCHild from "../../button/ButtonsCHild";
 import { UseContexts } from "../../store/Store";
+import GoBackBtn from "../../button/GoBackBtn";
 
 const All = () => {
   const { isLoggedIn } = UseContexts();
@@ -12,9 +12,7 @@ const All = () => {
       {isLoggedIn ? (
         <div className="flex flex-col gap-10">
           <div>
-            <NavLink to="/">
-              <ButtonsCHild children="Back" />
-            </NavLink>
+            <GoBackBtn />
           </div>
           <div>
             <Accordions />

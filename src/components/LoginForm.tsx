@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { UseContexts } from "./store/Store";
 import Buttons from "./button/Buttons";
 
@@ -8,14 +8,17 @@ const LoginForm = () => {
   const handle = () => {
     login();
   };
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/");
+  };
   return (
     <div className="py-32 px-10 text-3xl text-red-500 cursor-default">
       <div>
+        <Buttons children="Back" onClick={handleNavigate} />
         {isLoggedIn === false ? (
           <div>
-            <div className="nav">
-              <NavLink to="/">Back</NavLink>
-            </div>
             <div className="flex justify-center">
               <NavLink to="/">
                 <Buttons onClick={handle} children="Click" />
@@ -31,4 +34,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
