@@ -1,3 +1,4 @@
+import HomeBtn from "../../button/HomeBtn";
 import { UseContexts } from "../../store/Store";
 import AllButton from "../button/AllButton";
 import Badgesing from "./Badgesing";
@@ -14,7 +15,7 @@ const AllBadge = () => {
       {isLoggedIn ? (
         <div className="flex flex-col gap-5">
           <div className="nav">
-            <NavLink
+            {/* <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
@@ -23,7 +24,8 @@ const AllBadge = () => {
               }
             >
               Back
-            </NavLink>
+            </NavLink> */}
+            <HomeBtn />
           </div>
           <div className="nav text-center flex gap-5">
             <NavLink

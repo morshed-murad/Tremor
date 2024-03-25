@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { UseContexts } from "./store/Store";
 import Buttons from "./button/Buttons";
 
@@ -8,10 +8,9 @@ const LoginForm = () => {
   const handle = () => {
     login();
   };
-  const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/");
+    window.location.href = "/";
   };
   return (
     <div className="py-32 px-10 text-3xl text-red-500 cursor-default">

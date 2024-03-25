@@ -43,8 +43,8 @@ const Navbar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "bg-red-500 text-blue-700"
-                    : "bg-blue-700 text-white"
+                    ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                    : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
                 }
               >
                 Home
@@ -55,8 +55,8 @@ const Navbar = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-red-500 text-blue-700"
-                      : "bg-blue-700 text-white"
+                      ? "bg-red-500 text-blue-700 dark:bg-gray-500 dark:text-blue-800"
+                      : "bg-blue-700 text-white dark:bg-gray-900 dark:text-blue-500"
                   }
                   to="/loginform"
                 >
@@ -65,7 +65,6 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="nav flex gap-4 items-center">
- 
                 <div className="flex ralativ">
                   <img
                     onClick={handle}
