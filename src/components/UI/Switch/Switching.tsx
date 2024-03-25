@@ -9,7 +9,7 @@ const Switching = () => {
     setIsSwitchOn(value);
   };
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-red-200 to-red-500 dark:from-gray-500 dark:to-gray-800 ">
+    <div className="pt-8 pb-32 px-10 bg-gradient-to-r from-red-200 to-red-500 dark:from-gray-500 dark:to-gray-800 fixed top-[72px] left-0 w-full h-full z-40 overflow-auto">
       <div className="nav">
         <GoBackBtn />
       </div>

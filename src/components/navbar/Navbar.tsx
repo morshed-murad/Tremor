@@ -65,18 +65,7 @@ const Navbar = () => {
               </div>
             ) : (
               <div className="nav flex gap-4 items-center">
-                {/* <NavLink
-                // hidding th profill
-                onClick={() => setShow(false)}
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "bg-red-500 text-blue-700"
-                    : "bg-blue-700 text-white"
-                }
-              >
-                Home
-              </NavLink> */}
+ 
                 <div className="flex ralativ">
                   <img
                     onClick={handle}

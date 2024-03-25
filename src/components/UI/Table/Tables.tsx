@@ -25,7 +25,7 @@ const Tables = () => {
   };
 
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-green-900 to-green-300 dark:from-gray-500 dark:to-gray-800">
+    <div className="py-32 px-10 bg-gradient-to-r from-green-900 to-green-300 dark:from-gray-500 dark:to-gray-800 fixed top-[72px] left-0 w-full h-full z-40 overflow-auto">
       <GoBackBtn />
       <div className="bg-white dark:bg-gray-900 dark:border-none p-5 border rounded my-5">
         <Table>

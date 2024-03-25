@@ -14,7 +14,7 @@ import GoBackBtn from "../../button/GoBackBtn";
 const Selects = () => {
   const [value, setValue] = useState("");
   return (
-    <div className="py-32 px-10 bg-gradient-to-r from-blue-300 to-blue-900 dark:bg-gray-500 dark:to-gray-800">
+    <div className="pt-8 pb-32 px-10 bg-gradient-to-r from-blue-300 to-blue-900 dark:bg-gray-500 dark:to-gray-800 fixed top-[72px] left-0 w-full h-full z-40 overflow-auto">
       <div className="nav">
         <GoBackBtn />
       </div>

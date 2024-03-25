@@ -30,6 +30,7 @@ import Selects from "../UI/select/Selects";
 import Switching from "../UI/Switch/Switching";
 import NotFound from "../notfound/NotFound";
 import Tables from "../UI/Table/Tables";
+import Tabs from "../UI/Tabs/Tabs";
 
 const NabarLayout = () => {
   const Routers = createBrowserRouter(
@@ -59,6 +60,7 @@ const NabarLayout = () => {
           <Route path="select" element={<Selects />} />
           <Route path="swichs" element={<Switching />} />
           <Route path="table" element={<Tables />} />
+          <Route path="tabs" element={<Tabs />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>

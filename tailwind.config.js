@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 import colors from "tailwindcss/colors";
 
@@ -133,6 +132,20 @@ export default {
       pattern:
         /^(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
     },
+    ...["[#ffcc33]"].flatMap((customColor) => [
+      `bg-${customColor}`,
+      `border-${customColor}`,
+      `hover:bg-${customColor}`,
+      `hover:border-${customColor}`,
+      `hover:text-${customColor}`,
+      `fill-${customColor}`,
+      `ring-${customColor}`,
+      `stroke-${customColor}`,
+      `text-${customColor}`,
+      `ui-selected:bg-${customColor}`,
+      `ui-selected:border-${customColor}`,
+      `ui-selected:text-${customColor}`,
+    ]),
   ],
   // eslint-disable-next-line no-undef
   plugins: [require("@headlessui/tailwindcss"), require("@tailwindcss/forms")],
